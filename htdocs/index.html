@@ -25,7 +25,7 @@
 		<title>Home</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="manifest" href="manifest.json">
 		<meta name="theme-color" content="#2c3e50">
 	</head>
@@ -61,6 +61,7 @@
 										<ul class="actions">
 											
 											<li><a href="https://workhaul.my.canva.site/mhk" class="button big">Go to my old Website</a></li>
+											<li><a id="goHomeBtn" href="./" class="button big">Go to Home</a></li>
 										</ul>
 									</div>
 									
@@ -69,32 +70,63 @@
 									</span>
 								</section>
 
-								<section>
-									<header class="major">
-										<h2>Choose Your Class!</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon solid fa-calculator"></span>
-											<div class="content">
-											<h3><a href="11th/11th Home.html">Class 11th</a></h3>
-											<p>Practice problems, step‑by‑step solutions, and past‑paper drills to strengthen concepts.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-flask"></span>
-											<div class="content">
-											<h3><a href="10th/10thHome.html">Class 10th</a></h3>
-											<p>Clear explanations, experiment summaries, and topic question banks for exam prep.</p>
-											</div>
-										</article>
-										
-									</div>
-								</section>
-
-
-								<section>
+								
+								 <section>
 							<header class="major">
+								<h2>Submission Form</h2>
+							</header>
+							<!-- Section -->
+<form action="/" method="POST" enctype="multipart/form-data">
+						
+						<!-- Notebook title -->
+    					<label for="noticeTitle">Notebook Title:</label>
+   					<input type="text" id="noticeTitle" name="noticeTitle" required>
+    					<br><br>
+ 
+    					<!-- Class dropdown -->
+    					<label for="className">Class:</label>
+    					<select id="className" name="className" required>
+    						<option value="">Choose class</option>
+    						<option value="Class 10">Class 10</option>
+    						<option value="Class 11">Class 11</option>
+    						
+    					</select>
+    					<br><br>
+
+    					<!-- Subject dropdown -->
+    					<label for="subjectName">Subject:</label>
+    					<select id="subjectName" name="subjectName" required>
+    						<option value="">Choose subject</option>
+							<option value="Maths">Maths</option>
+    						<option value="Maths-core">Maths-core</option>
+							<option value="Maths-applied">Maths-applied</option>
+    						<option value="Physics">Physics</option>
+    						<option value="Chemistry">Chemistry</option>
+    						<option value="Biology">Biology</option>
+    						<option value="English">English</option>
+    						<option value="Hindi">Hindi</option>
+    						<option value="Accountancy">Accountancy</option>
+    						<option value="Statistical Economics">Statistical Economics</option>
+							<option value="Micro Economics">Micro Economics</option>
+    						<option value="Business Studies">Business Studies</option>
+    						<option value="Computer Science">Computer Science</option>
+    						<option value="History">History</option>
+    						<option value="Political Science">Political Science</option>
+    						<option value="Psychology">Psychology</option>
+    						<option value="Artificial Intelligence">Artificial Intelligence</option>
+    						<option value="Data Science">Data Science</option>
+    						<option value="Physical Activity Trainer">Physical Activity Trainer</option>
+    						<option value="Entrepreneurship">Entrepreneurship</option>
+    						<option value="Legal Studies">Legal Studies</option>
+    						<option value="Multimedia">Multimedia</option>
+    						<option value="Banking">Banking</option>
+    					</select>
+    					<br><br>
+ 
+    					<input type="file" id="fileUpload" name="fileUpload" required>
+    					<br><br>
+    					<input type="submit" value="Upload" style="float: right;">
+    				</form>
 								<h2>FeedBack:</h2>
 							</header>
 							<!-- Section -->
@@ -187,33 +219,7 @@
 								
 
 							<!-- Section -->
-						<section>
-							<header class="major">
-							 <div class="content">
-						<h1>Important Notice:</h1><br />
-						<table>
-							<tr>
-								<th>Notice</th>
-                                <th>Submitted</th>
-                                <th>Details</th>
-                            </tr>
-                            {% for notice in notices %}
-                            <tr>
-                                <td>{{ notice.title }}</td>
-                                <td>{{ notice.date_created.strftime('%Y-%m-%d %H:%M') }}</td>
-							</tr>
-							{% endfor %}
-						</table>
-
-<form action="/" method="POST" enctype="multipart/form-data">
-							<input type="text" id="noticeTitle" name="noticeTitle" placeholder="Notice Title" required>
-							<br><br>
-							<input type="file" id="fileUpload" name="fileUpload" required>
-							
-							<input type="submit" value="Upload" style="float: right;">
-						</form>
-							</div>
-						</section>
+						
 								
 
 						</div>
@@ -235,7 +241,7 @@
 									</header>
 									<ul>
 										<li><a href="10th/10thHome.html">Class 10th</a></li>
-										<li><a href="11th/11th Home.html">Class 11th</a></li>
+										<li><a href="11th/11th%20Home.html">Class 11th</a></li>
 										
 									</ul>
 								</nav>		
